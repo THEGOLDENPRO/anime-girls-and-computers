@@ -1,5 +1,6 @@
 [metadata]
 name = "Rikka Arch Linux"
+author = {"name": "Goldy", "github": "THEGOLDENPRO"}
 tags = [
     "rikka takanashi",
     "arch linux"
