@@ -8,6 +8,6 @@
 
 <br>
 
-*The begining of world domination.*
+*The beginning of world domination.*
 
 > readme soon™️
