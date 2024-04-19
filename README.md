@@ -6,4 +6,8 @@
 
 </div>
 
-> soon™️
+<br>
+
+*The begining of world domination.*
+
+> readme soon™️
