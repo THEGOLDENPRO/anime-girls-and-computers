@@ -1,0 +1,9 @@
+[metadata]
+name = "Lain and Gentoo Linux"
+author = {"name" = "Goldy", "github" = "THEGOLDENPRO"}
+tags = [
+    "lain",
+    "serial experiments",
+    "serial experiments lain",
+    "gentoo linux"
+]
