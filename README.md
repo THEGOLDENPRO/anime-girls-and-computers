@@ -8,9 +8,8 @@
 
 <br>
 
-*The beginning of world domination.*
-
-## Contribution Guidelines:
+<details>
+  <summary>Contribution Guidelines</summary>
 
 1. **No NSFW Content:** NSFW content is not permitted in accordance with the [Github Site Policy](https://docs.github.com/en/site-policy).
 
@@ -26,4 +25,8 @@
 
 7. **Allowed Formats:** PNG, JPEG / JPG, WEBP and GIF. Open an issue if you think we should allow a specific format.
 
+</details>
+
+> *The beginning of world domination.*
+> 
 > readme soon™️
