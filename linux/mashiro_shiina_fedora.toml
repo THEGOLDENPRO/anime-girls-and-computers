@@ -1,6 +1,10 @@
+version = 2
+
 [metadata]
 name = "Mashiro Shiina and Fedora"
-author = {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
 tags = [
     "the pet girl of sakurasou",
     "Mashiro Shiina",

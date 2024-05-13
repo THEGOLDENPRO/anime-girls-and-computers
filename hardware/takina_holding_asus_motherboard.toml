@@ -1,6 +1,10 @@
+version = 2
+
 [metadata]
 name = "Takina Inoue and a ASUS mainboard"
-author = {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
 tags = [
     "lycoris recoil",
     "takina inoue",
