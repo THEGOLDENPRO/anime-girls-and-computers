@@ -1,0 +1,12 @@
+version = 2
+
+[metadata]
+name = "Miyako Shikimori and Fedora"
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
+tags = [
+    "Shikimori's Not Just a Cutie",
+    "Miyako Shikimori",
+    "fedora"
+]
