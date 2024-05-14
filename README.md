@@ -2,11 +2,13 @@
 
   # 🖥️ Anime Girls & Computers
 
-  <sub>The Otaku rabbit hole.</sub>
+  <sub>High-Definition **Anime girls** + **Technology**, what could go wrong?</sub>
+
+  <img width="900px" src="./hardware/asus/takina_holding_asus_motherboard.png">
 
 </div>
 
-<br>
+# 🗞️ Info centre
 
 <details>
   <summary>Contribution Guidelines</summary>
@@ -27,6 +29,22 @@
 
 </details>
 
-> *The beginning of world domination.*
-> 
-> readme soon™️
+# 🖼️ Previews
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/THEGOLDENPRO/anime-girls-and-computers/blob/main/linux/arch/rikka_arch.png?raw=true">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./linux/fedora/mashiro_shiina_fedora.png">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./linux/fedora/miyako_shikimori_fedora.png">
+    </td>
+  </tr>
+</table>
