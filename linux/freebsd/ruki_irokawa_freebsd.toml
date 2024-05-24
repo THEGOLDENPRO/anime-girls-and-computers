@@ -1,0 +1,15 @@
+version = 2
+
+[metadata]
+name = "Ruki Irokawa and Freebsd"
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
+sources = [
+    "https://cdn.r3tr0ananas.pro/source/ruki_freebsd.png"
+]
+tags = [
+    "comic girls",
+    "ruki irokawa",
+    "freebsd"
+]
