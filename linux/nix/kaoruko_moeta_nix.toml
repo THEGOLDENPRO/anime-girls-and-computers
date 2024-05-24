@@ -1,0 +1,15 @@
+version = 2
+
+[metadata]
+name = "Kaoruko Moeta and NixOS"
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
+sources = [
+    "https://cdn.anisearch.de/images/character/screen/73/73529/full/430583.webp"
+]
+tags = [
+    "comic girls",
+    "kaoruko moeta",
+    "nixos"
+]

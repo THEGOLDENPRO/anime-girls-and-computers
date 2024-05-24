@@ -1,0 +1,15 @@
+version = 2
+
+[metadata]
+name = "Tsubasa Katsuki and Arch Linux"
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
+sources = [
+    "https://randomc.net/image/Comic%20Girls/Comic%20Girls%20-%2006%20-%20Large%2031.jpg"
+]
+tags = [
+    "comic girls",
+    "tsubasa katsuki",
+    "archlinux"
+]
