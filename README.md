@@ -11,7 +11,7 @@
 # 🗞️ Info centre
 
 <details>
-  <summary>Contribution Guidelines</summary>
+  <summary>Publishing Guidelines</summary>
 
 1. **No NSFW Content:** NSFW content is not permitted in accordance with the [Github Site Policy](https://docs.github.com/en/site-policy).
 
