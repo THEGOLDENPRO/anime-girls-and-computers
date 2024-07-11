@@ -4,7 +4,7 @@
 
   <sub>High-Definition **Anime girls** + **Technology**, what could go wrong?</sub>
 
-  <img width="900px" src="./hardware/asus/takina_holding_asus_motherboard.png">
+  <img width="900px" src="https://api.ananas.moe/agac/v1/get/takina_holding_asus_motherboard?raw=false">
 
 </div>
 
@@ -34,17 +34,17 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/THEGOLDENPRO/anime-girls-and-computers/blob/main/linux/arch/rikka_arch.png?raw=true">
+      <img src="https://api.ananas.moe/agac/v1/get/rikka_arch?raw=false">
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="./linux/fedora/mashiro_shiina_fedora.png">
+      <img src="https://api.ananas.moe/agac/v1/get/mashiro_shiina_fedora?raw=false">
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="./linux/fedora/miyako_shikimori_fedora.png">
+      <img src="https://api.ananas.moe/agac/v1/get/miyako_shikimori_fedora?raw=false">
     </td>
   </tr>
 </table>
