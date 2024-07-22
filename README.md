@@ -6,9 +6,9 @@
 
   <img width="900px" src="https://api.ananas.moe/agac/v1/get/takina_holding_asus_motherboard?raw=false">
 
-  <br>
-
 </div>
+
+<br>
 
 > [!WARNING]
 > This repo is quite large, so it may take a while to clone. <img width="40px" src="https://github.com/user-attachments/assets/e387cd64-f4f5-47e9-a1b6-c71f8ebb47e5">
