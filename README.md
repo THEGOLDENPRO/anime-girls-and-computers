@@ -6,6 +6,8 @@
 
   <img width="900px" src="https://api.ananas.moe/agac/v1/get/takina_holding_asus_motherboard?raw=false">
 
+  <br>
+
 </div>
 
 > [!WARNING]
