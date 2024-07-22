@@ -8,6 +8,15 @@
 
 </div>
 
+> [!WARNING]
+> This repo is quite large, so it may take a while to clone. <img width="40px" src="https://github.com/user-attachments/assets/e387cd64-f4f5-47e9-a1b6-c71f8ebb47e5">
+
+# 🌐 APIs
+Use one of the following community made APIs for quick fetching of images.
+| | URL | Hosted by | Location |
+|------|-------|:--------:|:-----:|
+| [agac-api](https://github.com/r3tr0ananas/agac-api) | [``https://api.ananas.moe/agac/v1/``](https://api.ananas.moe/agac/v1/) | [r3tr0ananas](https://github.com/r3tr0ananas) | 🇩🇪 |
+
 # 🗞️ Info centre
 
 <details>
