@@ -34,7 +34,7 @@ Use one of the following community made APIs for quick fetching of images.
 
 5. **Quality:** Images MUST be at least 1080p or over in resolution; please upscale your assets if necessary. We are glad to help, open an issue if you need any.
 
-6. **Size:** Please try and keep your image below 10MB but do not exceed 20MB. We will question or even decline pull requests if images are too large.
+6. **Size:** Please try and keep your image below 5MB but **do not** exceed 10MB. We will question or even decline pull requests if images are too large.
 
 7. **Allowed Formats:** PNG, JPEG / JPG, WEBP and GIF. Open an issue if you think we should allow a specific format.
 
