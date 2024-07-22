@@ -17,10 +17,10 @@ Use one of the following community made APIs for quick fetching of images.
 |------|-------|:--------:|:-----:|
 | [agac-api](https://github.com/r3tr0ananas/agac-api) | [``https://api.ananas.moe/agac/v1/``](https://api.ananas.moe/agac/v1/) | [r3tr0ananas](https://github.com/r3tr0ananas) | 🇩🇪 |
 
-# 🗞️ Info centre
+# 📰 Publishing Guidelines
 
 <details>
-  <summary>Publishing Guidelines</summary>
+  <summary>Click to unwrap</summary>
 
 1. **No NSFW Content:** NSFW content is not permitted in accordance with the [Github Site Policy](https://docs.github.com/en/site-policy).
 
@@ -37,6 +37,11 @@ Use one of the following community made APIs for quick fetching of images.
 7. **Allowed Formats:** PNG, JPEG / JPG, WEBP and GIF. Open an issue if you think we should allow a specific format.
 
 </details>
+
+# ©️ Usage of Images
+Publishing content to this repository, you will automatically adhere to [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license, meaning that everyone is free to use, distribute and modify your content with the exception that they must give [appropriate credit](https://creativecommons.org/licenses/by-sa/4.0/#ref-appropriate-credit) and distribute it under the [same license](https://creativecommons.org/licenses/by-sa/4.0/).
+
+**License:** https://creativecommons.org/licenses/by-sa/4.0/
 
 # 🖼️ Previews
 
