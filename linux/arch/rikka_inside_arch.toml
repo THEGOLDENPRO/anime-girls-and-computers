@@ -1,3 +1,5 @@
+version = 1
+
 [metadata]
 name = "Rikka inside Arch Linux"
 author = {"name" = "Goldy", "github" = "THEGOLDENPRO"}
