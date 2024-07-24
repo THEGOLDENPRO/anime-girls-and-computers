@@ -1,9 +1,16 @@
 /* This binary is meant to be ran inside of the anime girls and computers repo. (root of the repo) */
 
-use std::{fs, path::{Path, PathBuf}, process::exit};
+use std::{fs, path::{Path, PathBuf}, process::exit};    
 use colored::*;
 use glob::glob;
 use regex::Regex;
+use image::GenericImageView;
+
+enum LogLevel {
+    Success,
+    Failure,
+    Warning,
+}
 
 fn main() {
     let mut return_code: u8 = 0;
@@ -31,43 +38,65 @@ fn main() {
 
         let (result, message) = check_image(&file_path, file_parent_path);
 
-        if result == false {
-            log_success(false, image_name, message.unwrap().as_str());
-            return_code = 1;
-            continue;
+        match result {
+            LogLevel::Success => {
+                println!("[{}] ({}) {}", "PASS".bright_green(), image_name.bright_black(), message);
+            }
+            LogLevel::Warning => {
+                println!("[{}] ({}) {}", "WARNING".yellow(), image_name.bright_black(), message);
+            }
+            LogLevel::Failure => {
+                println!("[{}] ({}) {}", "FAILED".red().bold(), image_name.bright_black(), message);
+                return_code = 1;
+            }
         }
-
-        log_success(true, image_name, "Passed all checks!");
     }
 
     exit(return_code as i32);
 }
 
-fn log_success(successful: bool, image_id: &str, message: &str) {
-    if successful {
-        println!("[{}] ({}) {}", "PASS".bright_green(), image_id.bright_black(), message);
-        return;
-    }
+fn check_toml(toml_path: &PathBuf) -> Result<toml::Value, toml::de::Error> {
+    let toml_text = std::fs::read_to_string(toml_path).unwrap();
 
-    println!("[{}] ({}) {}", "FAILED".red().bold(), image_id.bright_black(), message)
+    let toml: Result<toml::Value, toml::de::Error> = toml::from_str(&toml_text);
+
+    toml
 }
 
-fn check_image(image_path: &PathBuf, parent_path: &Path) -> (bool, Option<String>) {
+fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
     let image_name = image_path.file_stem().unwrap().to_str().unwrap();
 
     let allowed_image_name_regex = Regex::new(r"^[a-zA-Z0-9_]+$").unwrap();
 
     if !allowed_image_name_regex.is_match(image_name) {
-        return (false, Some(format!("Such an image name is not allowed --> '{}'!", image_name)))
+        return (LogLevel::Failure, format!("Such an image name is not allowed --> '{}'!", image_name));
     }
 
-    // TODO: more uwu checks
+    let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
 
+    if image_size >= 7.0 {
+        return (LogLevel::Warning, format!("File size is over 7 MiB, current file size: {} MiB", image_size.round()));
+    }
+
+    let (width, height) = image::open(image_path).unwrap().dimensions();
+
+    if width >= 1080 || height >= 1080 {}
+    else {
+        return (LogLevel::Warning, "Image is not 1080-ish.".to_string());
+    }
+    
     let toml_path = parent_path.join(format!("{}.toml", image_name));
 
     if !toml_path.exists() {
-        return (false, Some(format!("TOML config does not exist! {:?} should be present.", toml_path)));
+        return (LogLevel::Failure, format!("TOML config does not exist! {:?} should be present.", toml_path));
     }
 
-    return (true, None);
+    match check_toml(&toml_path) {
+        Ok(_toml) => {},
+        Err(err) => {
+            return (LogLevel::Failure, format!("TOML config is invalid: {:?}", err));
+        }
+    }
+
+    return (LogLevel::Success, "Passed all checks!".to_string() );
 }
