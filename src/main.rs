@@ -21,8 +21,7 @@ fn main() {
     let glob_demon = glob("**/*.png").unwrap()
         .chain(glob("**/*.jpg").unwrap())
         .chain(glob("**/*.jpeg").unwrap())
-        .chain(glob("**/*.webp").unwrap())
-        .chain(glob("**/*.gif").unwrap());
+        .chain(glob("**/*.webp").unwrap());
 
     for file in glob_demon {
         let file_path = file.expect("Failed to retrieve PathBuf!");
@@ -84,7 +83,7 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
     else {
         return (LogLevel::Warning, "Image is not 1080-ish.".to_string());
     }
-    
+
     let toml_path = parent_path.join(format!("{}.toml", image_name));
 
     if !toml_path.exists() {
@@ -98,5 +97,5 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
         }
     }
 
-    return (LogLevel::Success, "Passed all checks!".to_string() );
+    return (LogLevel::Success, "Passed all checks!".to_string());
 }
