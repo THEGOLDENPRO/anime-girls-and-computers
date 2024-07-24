@@ -71,19 +71,6 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
         return (LogLevel::Failure, format!("Such an image name is not allowed --> '{}'!", image_name));
     }
 
-    let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
-
-    if image_size >= 7.0 {
-        return (LogLevel::Warning, format!("File size is over 7 MiB, current file size: {} MiB", image_size.round()));
-    }
-
-    let (width, height) = image::open(image_path).unwrap().dimensions();
-
-    if width >= 1080 || height >= 1080 {}
-    else {
-        return (LogLevel::Warning, "Image is not 1080-ish.".to_string());
-    }
-
     let toml_path = parent_path.join(format!("{}.toml", image_name));
 
     if !toml_path.exists() {
@@ -95,6 +82,19 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
         Err(err) => {
             return (LogLevel::Failure, format!("TOML config is invalid: {:?}", err));
         }
+    }
+
+    let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
+
+    if image_size >= 7.0 {
+        return (LogLevel::Warning, format!("File size is over 7 MiB, current file size: {} MiB", image_size.round()));
+    }
+
+    let (width, height) = image::open(image_path).unwrap().dimensions();
+
+    if width >= 1080 || height >= 1080 {}
+    else {
+        return (LogLevel::Warning, "Image is not 1080-ish.".to_string());
     }
 
     return (LogLevel::Success, "Passed all checks!".to_string());
