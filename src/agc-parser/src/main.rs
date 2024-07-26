@@ -80,13 +80,20 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
     let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
 
     if image_size >= 7.0 {
-        return (LogLevel::Warning, format!("File size is over 7 MiB, current file size: {:.2} MiB", image_size));
+        return (
+            LogLevel::Warning, 
+            format!(
+                "File size is over 7 MiB, the current file is size: {:.2} MiB. \
+                \nJust remember the limit is 10 MiB and if above that we may not except your image.", 
+                image_size
+            )
+        );
     }
 
     let image_resolution = imagesize::size(image_path).expect(format!("Failed to read the actual image of '{}'!", image_name).as_str());
 
     if !(image_resolution.width >= 1080 || image_resolution.height >= 1080) {
-        return (LogLevel::Warning, "Image is not 1080-ish.".to_string());
+        return (LogLevel::Failure, "Image is not 1080p or above, it must be higher to fit our quality criteria.".to_string());
     }
 
     return (LogLevel::Success, "Passed all checks!".to_string());
