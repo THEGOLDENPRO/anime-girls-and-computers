@@ -1,10 +1,11 @@
 /* This binary is meant to be ran inside of the anime girls and computers repo. (root of the repo) */
 
 use std::{fs, path::{Path, PathBuf}, process::exit};    
-use colored::*;
+
+use imagesize;
 use glob::glob;
+use colored::*;
 use regex::Regex;
-use image::GenericImageView;
 
 enum LogLevel {
     Success,
@@ -54,14 +55,6 @@ fn main() {
     exit(return_code as i32);
 }
 
-fn check_toml(toml_path: &PathBuf) -> Result<toml::Value, toml::de::Error> {
-    let toml_text = std::fs::read_to_string(toml_path).unwrap();
-
-    let toml: Result<toml::Value, toml::de::Error> = toml::from_str(&toml_text);
-
-    toml
-}
-
 fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
     let image_name = image_path.file_stem().unwrap().to_str().unwrap();
 
@@ -78,7 +71,7 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
     }
 
     match check_toml(&toml_path) {
-        Ok(_toml) => {},
+        Ok(_) => {},
         Err(err) => {
             return (LogLevel::Failure, format!("TOML config is invalid: {:?}", err));
         }
@@ -87,15 +80,22 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
     let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
 
     if image_size >= 7.0 {
-        return (LogLevel::Warning, format!("File size is over 7 MiB, current file size: {} MiB", image_size.round()));
+        return (LogLevel::Warning, format!("File size is over 7 MiB, current file size: {:.2} MiB", image_size));
     }
 
-    let (width, height) = image::open(image_path).unwrap().dimensions();
+    let image_resolution = imagesize::size(image_path).expect(format!("Failed to read the actual image of '{}'!", image_name).as_str());
 
-    if width >= 1080 || height >= 1080 {}
-    else {
+    if !(image_resolution.width >= 1080 || image_resolution.height >= 1080) {
         return (LogLevel::Warning, "Image is not 1080-ish.".to_string());
     }
 
     return (LogLevel::Success, "Passed all checks!".to_string());
+}
+
+fn check_toml(toml_path: &PathBuf) -> Result<toml::Value, toml::de::Error> {
+    let toml_text = std::fs::read_to_string(toml_path).unwrap();
+
+    let toml: Result<toml::Value, toml::de::Error> = toml::from_str(&toml_text);
+
+    toml
 }
