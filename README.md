@@ -37,7 +37,7 @@ Use one of the following community made APIs for quick fetching of images.
 
 6. **Size:** Please try and keep your image below 5MB but **do not** exceed 10MB. We will question or even decline pull requests if images are too large.
 
-7. **Allowed Formats:** PNG, JPEG / JPG, WEBP and GIF. Open an issue if you think we should allow a specific format.
+7. **Allowed Formats:** PNG, JPEG / JPG, WEBP. Open an issue if you think we should allow a specific format.
 
 </details>
 
