@@ -8,5 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Build agc-parser
+        run: cargo build --release
+      
       - name: Run agc-parser
-        run: cargo run
+        run: ./target/release/agc-parser
