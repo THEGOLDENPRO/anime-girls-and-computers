@@ -1,12 +1,12 @@
-name: Parse images
+name: Build agc-parser
 
 on:
   push:
     paths:
-      - src/agc-parser
+      - src/agc-parser/**
   pull_request:
     paths:
-      - src/agc-parser
+      - src/agc-parser/**
 
 jobs:
   build:
