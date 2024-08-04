@@ -1,0 +1,41 @@
+name: Parse images
+
+on:
+  push:
+    paths:
+      - src/agc-parser
+  pull_request:
+    paths:
+      - src/agc-parser
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build agc-parser
+        run: cargo build --release
+
+      - name: Move binary to root.
+        run: mv ./target/release/agc-parser .
+
+      - name: Commit files
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions"
+          git add --all
+          if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+          else
+             git commit -m "chore: update agc-parser binary." -a
+             echo "::set-output name=push::true"
+          fi
+        shell: bash
+
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
