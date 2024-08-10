@@ -1,13 +1,6 @@
 name: Build agc-parser
 
-on:
-  push:
-    paths:
-      - src/agc-parser/**
-  pull_request:
-    paths:
-      - src/agc-parser/**
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
