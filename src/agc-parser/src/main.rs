@@ -72,7 +72,7 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
 
     let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
 
-    if image_size <= 10.0 {
+    if image_size >= 10.0 {
         return (
             LogLevel::Failure, 
             format!(
