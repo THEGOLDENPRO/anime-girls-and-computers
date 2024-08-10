@@ -16,9 +16,6 @@ enum LogLevel {
 fn main() {
     let mut return_code: u8 = 0;
 
-    let uwu_ignore_file = fs::read_to_string(".uwuignore").expect("Can't find .uwuignore file!");
-    let ignored_folders: Vec<&str> = uwu_ignore_file.lines().collect();
-
     let glob_demon = glob("**/*.png").unwrap()
         .chain(glob("**/*.jpg").unwrap())
         .chain(glob("**/*.jpeg").unwrap())
@@ -27,10 +24,6 @@ fn main() {
     for file in glob_demon {
         let file_path = file.expect("Failed to retrieve PathBuf!");
         let file_parent_path = file_path.parent().unwrap();
-
-        if ignored_folders.contains(&file_parent_path.file_name().unwrap().to_str().unwrap()) {
-            continue;
-        }
 
         let image_name = (&file_path).file_stem().unwrap().to_str().unwrap();
 
