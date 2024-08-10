@@ -74,7 +74,7 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
 
     if image_size >= 10.0 {
         return (
-            LogLevel::Failure, 
+            LogLevel::Warning, 
             format!(
                 "File size is {:.2} MiB, the limit is 10 MiB",
                 image_size
