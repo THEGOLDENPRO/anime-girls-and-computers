@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - src/agc-parser/**
+  workflow_dispatch:
 
 jobs:
   build:
