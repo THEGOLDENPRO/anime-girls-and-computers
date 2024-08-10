@@ -8,5 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download agc-parser
+        run: wget -O agc-parser https://github.com/THEGOLDENPRO/anime-girls-and-computers/raw/agc-parser/agc-parser
+
       - name: Run agc-parser
         run: ./agc-parser
