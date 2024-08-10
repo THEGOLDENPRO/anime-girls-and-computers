@@ -79,12 +79,11 @@ fn check_image(image_path: &PathBuf, parent_path: &Path) -> (LogLevel, String) {
 
     let image_size = image_path.metadata().unwrap().len() as f64 / (1024.0 * 1024.0);
 
-    if image_size >= 7.0 {
+    if image_size <= 10.0 {
         return (
-            LogLevel::Warning, 
+            LogLevel::Failure, 
             format!(
-                "File size is over 7 MiB, the current file is size: {:.2} MiB. \
-                \nJust remember the limit is 10 MiB and if above that we may not except your image.", 
+                "File size is over 10 MiB, the limit is 10 MiB",
                 image_size
             )
         );
