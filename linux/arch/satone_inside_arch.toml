@@ -1,0 +1,12 @@
+version = 2
+
+[metadata]
+name = "Satone inside Arch Linux"
+authors = [
+    {"name" = "Goldy", "github" = "THEGOLDENPRO"}
+]
+tags = [
+    "Satone Shichimiya",
+    "satone inside arch linux logo",
+    "arch linux"
+]

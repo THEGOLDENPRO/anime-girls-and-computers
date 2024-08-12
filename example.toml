@@ -2,12 +2,20 @@ version = 2
 
 [metadata]
 name = "Lain and Gentoo Linux"
+# The authors you would like to credit for the creation of the image, so most likely yourself.
+# You must be one of them however, we don't accept reposting of other author's images without permission.
 authors = [
     {"name" = "Goldy", "github" = "THEGOLDENPRO"}
 ]
+# A list of key words or names that can be used to better describe this image.
+# These tags will be used to optimize search algorithims on websites and APIs.
 tags = [
     "lain",
     "serial experiments",
     "serial experiments lain",
     "gentoo linux"
+]
+# A list of urls leading to each assest from the internet you used to produce this image. (if none, just skip this key)
+sources = [
+    "https://www.reddit.com/r/chuunibyou/comments/hgjo35/ive_always_loved_shichimiya_8k_wallpaper/" # Not the actual source, just using this as an example.
 ]
