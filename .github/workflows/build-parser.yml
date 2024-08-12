@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Build agc-parser
         run: cargo build --release
 
