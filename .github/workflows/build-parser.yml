@@ -28,11 +28,9 @@ jobs:
           git config --local user.name "github-actions"
           git add ./agc-parser
           git commit -m "chore: update agc-parser binary." -a
-          echo "::set-output name=push::true"
         shell: bash
 
       - name: Push changes
-        if: steps.commit.outputs.push == 'true'
         uses: ad-m/github-push-action@master
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
