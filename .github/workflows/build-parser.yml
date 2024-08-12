@@ -19,6 +19,9 @@ jobs:
         with:
           ref: main
 
+      - name: Kidnap the binary file from agc-parser branch.
+        run: "git show agc-parser:agc-parser > ./agc-parser"
+
       - name: Commit files
         id: commit
         run: |
