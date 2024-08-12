@@ -24,6 +24,8 @@ jobs:
           cp ./agc-parser ./main-branch/
 
           cd ./main-branch
+          ls
+          git status
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions"
           git add ./agc-parser
@@ -40,4 +42,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
-           branch: ${{ github.ref }}
+           branch: main
