@@ -14,25 +14,16 @@ jobs:
       - name: Move binary to root.
         run: mv ./target/release/agc-parser .
 
-      - name: Commit binary temporarily
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "github-actions"
-          git add ./agc-parser
-          git commit -m "temp" -a
-        shell: bash
-
       - uses: actions/checkout@v4
         with:
           ref: main
+          path: main-branch
 
-      - name: Kidnap the binary file from agc-parser branch.
+      - name: Kidnap the binary file to main branch then commit him.
         run: |
-          git branch -v
+          cp ./agc-parser ./main-branch/
 
-      - name: Commit files
-        id: commit
-        run: |
+          cd ./main-branch
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions"
           git add ./agc-parser
