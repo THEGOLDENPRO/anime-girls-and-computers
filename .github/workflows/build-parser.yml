@@ -8,6 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Remove .git temporarily to help git detect changes later on.
+        run: rm -r .git
+
       - name: Build agc-parser
         run: cargo build --release
 
