@@ -29,7 +29,6 @@ jobs:
       - name: Kidnap the binary file from agc-parser branch.
         run: |
           git branch -v
-          git checkout agc-parser -- agc-parser
 
       - name: Commit files
         id: commit
