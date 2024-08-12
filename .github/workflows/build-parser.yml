@@ -27,7 +27,9 @@ jobs:
           ref: main
 
       - name: Kidnap the binary file from agc-parser branch.
-        run: "git checkout agc-parser -- agc-parser"
+        run: |
+          git branch -v
+          git checkout agc-parser -- agc-parser
 
       - name: Commit files
         id: commit
