@@ -18,6 +18,7 @@ Use one of the following community made APIs for quick fetching of images.
 | | URL | Hosted by | Location |
 |------|-------|:--------:|:-----:|
 | [agac-api](https://github.com/r3tr0ananas/agac-api) (official) | [``https://api.ananas.moe/agac/v1/``](https://api.ananas.moe/agac/v1/) | [r3tr0ananas](https://github.com/r3tr0ananas) | 🇩🇪 |
+| [agac-api](https://github.com/r3tr0ananas/agac-api) (instance) | [``https://agac.teaishealthy.me``](https://agac.teaishealthy.me) | [teaishealthy](https://github.com/teaishealthy) | 🇩🇪 |
 | [agac-api](https://github.com/r3tr0ananas/agac-api) (instance) | [``https://api.emmatech.dev/agac``](https://api.emmatech.dev/agac) | [EmmmaTech](https://github.com/EmmmaTech) | 🇺🇸 |
 
 # 📰 Publishing Guidelines
