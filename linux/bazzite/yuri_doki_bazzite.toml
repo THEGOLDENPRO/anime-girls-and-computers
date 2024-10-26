@@ -1,0 +1,15 @@
+version = 2
+
+[metadata]
+name = "Yuri Doki and Bazzite"
+authors = [
+    {"name" = "rainydevzz", "github" = "rainydevzz"}
+]
+sources = [
+    "https://64.media.tumblr.com/a66103bd2bf90bffa82313cb9b0dc6b1/tumblr_inline_p36sf03Hq61vn5r27_500.png"
+]
+tags = [
+    "doki doki literature club",
+    "yuri doki",
+    "bazzite"
+]
