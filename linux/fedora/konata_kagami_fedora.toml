@@ -1,0 +1,13 @@
+version = 2
+
+[metadata]
+name = "Konata Izumi and Kagami Hiiragi with Fedora Logo"
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
+tags = [
+    "Lucky Star",
+    "Konata Izumi",
+    "Kagami Hiiragi",
+    "Fedora"
+]
