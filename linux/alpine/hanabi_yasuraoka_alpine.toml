@@ -1,0 +1,15 @@
+version = 2
+
+[metadata]
+name = "Hanabi Yasuraoka and Alpine Linux"
+authors = [
+    {"name" = "r3tr0ananas", "github" = "r3tr0ananas"}
+]
+sources = [
+    "https://img.anime2you.de/2019/02/SW-V01-Beitragsbild.jpg"
+]
+tags = [
+    "Scum's Wish",
+    "Hanabi Yasuraoka",
+    "alpine linux"
+]
