@@ -1,0 +1,14 @@
+version = 2
+
+[metadata]
+name = "Nagisa Furukawa and Gentoo"
+authors = [
+    {"name" = "Goldy", "github" = "THEGOLDENPRO"}
+]
+tags = [
+    "nagisa",
+    "nagisa furukawa",
+    "clannad",
+    "kyoto ani",
+    "gentoo linux"
+]
