@@ -1,0 +1,17 @@
+version = 2
+
+[metadata]
+name = "Wayland + Kouko"
+authors = [
+    {"name" = "Goldy", "github" = "THEGOLDENPRO"}
+]
+# A list of key words or names that can be used to better describe this image.
+# These tags will be used to optimize search algorithims on websites and APIs.
+tags = [
+    "kouko",
+    "golden time",
+    "wayland"
+]
+sources = [
+    "https://wallpapercave.com/w/wp8391444" # source but this image actually is directly from the anime
+]
